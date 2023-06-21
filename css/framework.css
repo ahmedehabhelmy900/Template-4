@@ -1,0 +1,117 @@
+/*
+-------------------------------------------------
+-------------------  container ------------------
+-------------------------------------------------
+*/
+
+.container{
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ---------- ipad ---------- */
+
+@media only screen and (min-device-width: 768px) and (-webkit-min-device-pixel-ratio: 1) {
+    .container {
+        width: 600px;
+    }
+}
+
+/* ---------- computer ---------- */
+
+@media screen and (min-device-width: 1200px) and (-webkit-min-device-pixel-ratio: 1) {
+    .container {
+        width: 1050px;
+    }
+}
+
+/*
+-------------------------------------------------
+-----------------  Global rules -----------------
+-------------------------------------------------
+*/
+
+/* ---------- box sizing = border box */
+
+* {
+    box-sizing: border-box;
+}
+
+/* ---------- scoll behavior ---------- */
+
+html {
+    scroll-behavior: smooth;
+}
+
+/*
+--------------------------------
+---------- two in one ----------
+--------------------------------
+*/
+
+.parent{
+    display: grid;
+    justify-content: center;
+    column-gap: 40px;
+}
+
+.content-1,
+.content-2{
+    min-width: 340px;
+}
+
+/* ----- media ----- */
+
+@media screen and (min-device-width: 1200px) and (-webkit-min-device-pixel-ratio: 1) {
+    .parent{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media only screen and (min-device-width: 768px) and (-webkit-min-device-pixel-ratio: 1) {
+    .not-img{
+        margin-left: 80px;
+    }
+    .p-1,
+    .p-2,
+    .p-3,
+    .p-4{
+        position: relative;
+    }
+    .i{
+        position: absolute;
+        top: 0;
+    }
+}
+
+@media screen and (min-width: 360px) and (-webkit-device-pixel-ratio: 2) {
+    .p-1,
+    .p-2,
+    .p-3,
+    .p-4{
+        text-align: center;
+    }
+}
+
+/*
+-------------------------------
+---------- Normal ul ---------- 
+-------------------------------
+*/
+
+ul{
+    list-style: none;
+    padding: 0;
+}
+
+/*
+-------------------------------
+---------- Normal a ---------- 
+-------------------------------
+*/
+
+a{
+    text-decoration: none;
+}
